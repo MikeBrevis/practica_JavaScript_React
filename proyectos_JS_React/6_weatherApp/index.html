@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App - Proyecto Educativo</title>
+  <!-- Viniaremos nuestro CSS aquí -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 
+        CLASE #1: ESTRUCTURA SEMÁNTICA
+        Usaremos un contenedor principal para centrar nuestra tarjeta del clima.
+    -->
+  <main class="container">
+
+    <div class="weather-card">
+
+      <!-- SECCIÓN 1: BUSCADOR -->
+      <div class="search-box">
+        <!-- Icono de ubicación (opcional) -->
+        <input type="text" placeholder="Buscar ciudad (ej. Santiago)" class="search-input">
+        <button class="search-btn">
+          Buscar
+        </button>
+      </div>
+
+      <!-- SECCIÓN 2: CLIMA ACTUAL (Lo ocultaremos visualmente hasta tener datos, o mostramos un placeholder) -->
+      <div class="weather-body">
+        <img src="" alt="Icono del clima" class="weather-icon hidden">
+
+        <div class="weather-data">
+          <h1 class="temp">--°C</h1>
+          <h2 class="city">Ciudad</h2>
+          <p class="description">--</p>
+        </div>
+
+        <div class="weather-details">
+          <div class="col">
+            <p class="humidity">--%</p>
+            <p>Humedad</p>
+          </div>
+          <div class="col">
+            <p class="wind">-- km/h</p>
+            <p>Viento</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Script de JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

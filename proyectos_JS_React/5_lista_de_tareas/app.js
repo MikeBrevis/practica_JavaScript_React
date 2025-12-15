@@ -40,6 +40,9 @@ crearTarea.addEventListener("click", function () {
 })
 
 listaTareas.addEventListener("click", function (e) {
+
+    console.log(e.target.closest(".tarea"))
+
     if (e.target.classList.contains("trash")) {
         let eliminarTarea = e.target.closest(".tarea")
         eliminarTarea.remove()
@@ -47,18 +50,16 @@ listaTareas.addEventListener("click", function (e) {
 
     let tareaCompleta = e.target.closest(".tarea")
 
-    if (e.target.checked === true) {
-        tareaCompleta.classList.add("completa")
+    if (e.target.type === "checkbox") {
 
-    } else {
-        tareaCompleta.classList.remove("completa")
+        if (e.target.checked === true) {
+            tareaCompleta.classList.add("completa")
+
+        } else {
+            tareaCompleta.classList.remove("completa")
+        }
     }
 })
-
-
-
-
-
 
 
 
