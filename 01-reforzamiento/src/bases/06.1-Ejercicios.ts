@@ -49,7 +49,64 @@ const buildUserSummary = ({ username, email, role }: UserPayload) => {
 const person1 = buildUserSummary(person)
 console.log(person1)
 
+// Desestructuración con valores por defecto (caso real)
 
+interface UserPayload2 {
+  username: string;
+  email?: string;
+  role?: "admin" | "user";
+}
 
+const person2: UserPayload2 = {
+  username: "Mike",
+  email: "Mike@mail.com",
+  role: "admin",
+};
+
+const buildUser = ({ username, email = 'no informado', role = 'user' }: UserPayload2) => {
+  return `usuario: ${username} | email: ${email} | rol: ${role}`
+}
+
+const person3 = buildUser(person2)
+console.log(person3)
+
+// Desestructuración anidada (caso real de backend)
+
+interface ApiUser {
+  id: number;
+  profile: {
+    username: string;
+    contact?: {
+      email?: string;
+      phone?: string;
+    };
+  };
+}
+
+const apiPerson: ApiUser = {
+  id: 12345,
+  profile: {
+    username: 'Adonys',
+    contact: {
+      email: 'AD159*@gmail.com',
+      phone: '123456',
+    },
+  },
+}
+
+const buildApi = ({
+  profile: {
+    username,
+    contact: {
+      email = 'no informado',
+      phone = 'no informado',
+    } = {}, // Si un nivel de objeto es opcional, al desestructurarlo se le debe dar un objeto por defecto.
+  },
+}: ApiUser) => {
+  return `usuario: ${username} | email: ${email} | telefono: ${phone}`
+}
+
+const personBuild = buildApi(apiPerson)
+console.log(personBuild)
 
 
