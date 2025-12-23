@@ -14,13 +14,21 @@ console.log(getHeroById(5))
 
 // Funcion que retorna los heroes según su marca
 
-const getHeroByOwner = (owner: Owner): Hero[] => {
+/* export const getHeroByOwner = (owner: Owner): Hero[] => {
     const DcHeroes = heroes.filter((hero) => {
         return hero.owner === owner;
     });
 
     return DcHeroes
+}; */
+
+export const getHeroByOwner = (owner: Owner) => {
+    const DcHeroes = heroes.filter(
+        hero => hero.owner === owner
+    );
+    return DcHeroes
 };
 
-console.log(getHeroByOwner(Owner.DC))
+// Console.log de la funcion en archivo main.ts
+
 
