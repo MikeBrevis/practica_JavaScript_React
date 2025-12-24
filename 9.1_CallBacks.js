@@ -14,12 +14,33 @@ procesaUsuario('Ana', saludar)
 procesaUsuario('Mike', despedir)
 
 // Funcion setTimeOut
+//Asincrono, se ejecuta 1, 3 y 2
 
-const miFuncion = () => {console.log('han pasado 2 segundos!')}
-
+1//
 console.log('Inicio')
-setTimeout(miFuncion, 2000)
+
+2//
+setTimeout(() => {
+    console.log('han pasado 2 segundos!')
+}, 2000)
+
+3//
 console.log('Fin')
 
+//CallBacks con parametros
+
+function esperarUnSegundo(callback) {
+  setTimeout(() => {
+    const mensaje = "¡Ya pasaron 3 segundo!";
+    callback(mensaje); // Le pasamos un parámetro al callback
+  }, 3000);
+}
+
+function mostrarMensaje(texto) {
+  console.log(texto);
+}
+
+// Aquí llamamos a la función y le pasamos el callback
+esperarUnSegundo(mostrarMensaje);
 
 
