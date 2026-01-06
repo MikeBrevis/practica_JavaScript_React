@@ -1,9 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <h1>Hola mundo!!</h1>
+    <h1>Hola mundo</h1>
+    <p>Parrafo</p>
+    <button>Click me!</button>
+
+    
   </StrictMode>,
 )
+
