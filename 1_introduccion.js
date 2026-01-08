@@ -1,3 +1,12 @@
+// Tipos de datos
+
+// Int: Entero
+// Float: Decimal
+// String: Texto
+// Boolean: True o False
+// Null: Nulo
+// Undefined: No definido
+
 /* Console log */
 console.log("Hola, js")
 
