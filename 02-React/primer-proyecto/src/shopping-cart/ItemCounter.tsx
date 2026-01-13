@@ -1,9 +1,10 @@
 interface Props {
     name: string;
+    quantity? : number;
 }
 
 /* rafc + tab = Atajo para crear un componente funcional */
-export const ItemCounter = ({ name }: Props) => {
+export const ItemCounter = ({ name, quantity }: Props) => {
         return (
             <section style={{
                 display: 'flex',
@@ -22,7 +23,7 @@ export const ItemCounter = ({ name }: Props) => {
                 </span>
 
                 <button>+</button>
-                <span>0</span>
+                <span>{ quantity }</span>
                 <button>-</button>
             </section>
         )
