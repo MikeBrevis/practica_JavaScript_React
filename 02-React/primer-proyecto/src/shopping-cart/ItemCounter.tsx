@@ -9,7 +9,8 @@ export const ItemCounter = ({ name, quantity }: Props) => {
             <section style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '1rem'
+                gap: '1rem',
+                backgroundColor: 'red',
             }}
             >
                 <span style={{
@@ -22,7 +23,11 @@ export const ItemCounter = ({ name, quantity }: Props) => {
                     { name }
                 </span>
 
-                <button>+</button>
+                <button
+                    onClick={ () => {
+                        console.log(`click ${name}`)
+                    }}
+                >+</button>
                 <span>{ quantity }</span>
                 <button>-</button>
             </section>
