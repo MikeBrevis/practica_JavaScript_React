@@ -2,7 +2,7 @@ import { ItemCounter } from "./shopping-cart/ItemCounter";
 
 interface ItemInCart {
     productName: string;
-    quantity: number;
+    quantity?: number;
 }
 
 const itemsInCart: ItemInCart[] = [

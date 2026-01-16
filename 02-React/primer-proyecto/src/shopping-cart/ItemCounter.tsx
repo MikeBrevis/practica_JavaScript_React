@@ -1,10 +1,23 @@
+import { useState } from "react";
+
 interface Props {
     name: string;
     quantity? : number;
 }
 
+export const  ItemCounter = ({ name, quantity = 1 }: Props) => {
+
+    const [ count, setCount ] =  useState(quantity);
+
+    const handleAdd = () => {
+        setCount( count + 1 );
+    }
+    const handleRemove = () => {
+        if ( count === 0 ) return;
+        setCount( count - 1 );
+    }
+
 /* rafc + tab = Atajo para crear un componente funcional */
-export const ItemCounter = ({ name, quantity }: Props) => {
         return (
             <section style={{
                 display: 'flex',
@@ -23,16 +36,14 @@ export const ItemCounter = ({ name, quantity }: Props) => {
                     { name }
                 </span>
 
-                <button
-                    onClick={ () => {
-                        console.log(`click ${name}`)
-                    }}
-                >+</button>
-                <span>{ quantity }</span>
-                <button>-</button>
+                <button onClick={handleAdd}>+</button>
+                <span>{ count }</span>
+                <button onClick={handleRemove}>-</button>
             </section>
         )
     }
+
+
 
 
 
