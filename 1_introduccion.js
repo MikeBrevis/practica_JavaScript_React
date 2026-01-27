@@ -36,7 +36,7 @@ console.log(typeof age == "number") // true
 
 // ambos valores solo pueden tener un valor
 let papel // Undefined = la variable no a sido definida
-let rollo = null // // Null = para que tenga el valor de Null debemos de asignarlo
+let rollo = null // Null = para que tenga el valor de Null debemos de asignarlo
 
 
 

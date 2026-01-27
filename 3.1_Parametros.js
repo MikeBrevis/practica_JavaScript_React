@@ -21,6 +21,19 @@ console.log("La suma de ambos numeros es " + resultadoSuma)
 const resultadoResta = resta(2, 5)
 console.log("La resta de ambos numeros es " + resultadoResta)
 
+function mostrarArrays(mensaje, array) {
+    console.log(mensaje)
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
+    }
+}
+
+const array1 = [1, 2, 3, 4, 5]
+const array2 = ["MIKE", "Guts", "Loba"]
+
+mostrarArrays('Muestra el array de numeros ', array1)
+mostrarArrays('Muestra el array de nombres ', array2)
+
 /*  --------------------------------------------------------- FUNCIONES COMO PARAMETROS 
 las funciones son ciudadanos de primera clase (first-class citizens). Esto significa que las funciones se pueden tratar como cualquier otro valor: se pueden asignar a variables, pasar como argumentos a otras funciones, y devolver desde otras funciones
 */
