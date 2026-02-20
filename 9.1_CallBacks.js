@@ -1,4 +1,4 @@
-// Ejemplo de callback
+// Funcion que le pasas a otra funcion como si fuera un dato
 
 const saludar = (nombre) => console.log(`Hola ${nombre}`)
 const despedir = (nombre) => console.log(`Adios ${nombre}`)
@@ -16,15 +16,15 @@ procesaUsuario('Mike', despedir)
 // Funcion setTimeOut
 //Asincrono, se ejecuta 1, 3 y 2
 
-1//
+//1
 console.log('Inicio')
 
-2//
+//2
 setTimeout(() => {
     console.log('han pasado 2 segundos!')
 }, 2000)
 
-3//
+//3
 console.log('Fin')
 
 //CallBacks con parametros
@@ -42,5 +42,4 @@ function mostrarMensaje(texto) {
 
 // Aquí llamamos a la función y le pasamos el callback
 esperarUnSegundo(mostrarMensaje);
-
 
